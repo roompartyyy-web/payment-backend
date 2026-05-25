@@ -8,7 +8,6 @@ app.use(express.json());
 
 const API_KEY = "9aba1f45-be7d-40c4-814d-030967cc240f";
 
-// REMPLACE PAR TON ADRESSE ETH
 const WALLET_ADDRESS = "0x107c5c04eB2BCbC0C0Cf22eebDbD1c4DE7F6d68b";
 
 app.post("/create-payment", async (req, res) => {
@@ -17,8 +16,9 @@ app.post("/create-payment", async (req, res) => {
 
   const paymentUrl =
     `https://global.transak.com/?apiKey=${API_KEY}` +
-    `&cryptoCurrencyCode=ETH` +
-    `&network=ethereum` +
+    `&productsAvailed=BUY` +
+    `&defaultCryptoCurrency=ETH` +
+    `&defaultNetwork=ethereum` +
     `&walletAddress=${WALLET_ADDRESS}` +
     `&fiatCurrency=EUR` +
     `&fiatAmount=${amount}` +
