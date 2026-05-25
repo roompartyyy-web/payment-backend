@@ -22,7 +22,7 @@ app.post("/create-payment", async (req, res) => {
     `&walletAddress=${WALLET_ADDRESS}` +
     `&fiatCurrency=EUR` +
     `&fiatAmount=${amount}` +
-    `&redirectURL=https://secertlyla-builder-8qic78cvgedtnydd.hostingersite.com//success`;
+    `&redirectURL=https://secertlyla-builder-8qic78cvgedtnydd.hostingersite.com/success`;
 
   res.json({
     url: paymentUrl
